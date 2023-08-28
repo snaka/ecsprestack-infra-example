@@ -1,0 +1,5 @@
+nat_gateway_zones:
+  # private zone -> nat gateway zone の組み合わせ
+  # dev 環境はコスト削減のため nat gateway を冗長化しない
+  ap-northeast-1a: ap-northeast-1a
+  ap-northeast-1c: ap-northeast-1a
