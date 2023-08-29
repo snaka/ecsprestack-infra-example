@@ -3,3 +3,10 @@ nat_gateway_zones:
   # dev 環境はコスト削減のため nat gateway を冗長化しない
   ap-northeast-1a: ap-northeast-1a
   ap-northeast-1c: ap-northeast-1a
+alb:
+  target_group:
+    health_check:
+      healthy_threshold: 2
+      unhealthy_threshold: 2
+      interval: 30
+      timeout: 10

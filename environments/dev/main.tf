@@ -18,3 +18,9 @@ module "vpc" {
   source = "../../modules/vpc"
   conf   = module.conf
 }
+
+module "alb" {
+  source = "../../modules/alb"
+  conf   = module.conf
+  vpc    = module.vpc
+}
