@@ -3,16 +3,16 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Environment = module.conf.env
+      Environment        = module.conf.env
       TerraformWorkspace = terraform.workspace
     }
   }
 }
 
 module "conf" {
-  source = "../../module/conf"
+  source = "../../modules/conf"
 }
 
 module "vpc" {
-  source = "../../module/vpc"
+  source = "../../modules/vpc"
 }
