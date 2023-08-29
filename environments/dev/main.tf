@@ -5,6 +5,7 @@ provider "aws" {
     tags = {
       Environment        = module.conf.env
       TerraformWorkspace = terraform.workspace
+      Test               = "test"
     }
   }
 }
