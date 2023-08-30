@@ -24,3 +24,9 @@ module "alb" {
   conf   = module.conf
   vpc    = module.vpc
 }
+
+module "ecs" {
+  source = "../../modules/ecs"
+  conf   = module.conf
+  vpc_id = module.vpc.id
+}
