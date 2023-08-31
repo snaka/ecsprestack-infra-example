@@ -30,3 +30,10 @@ module "ecs" {
   conf   = module.conf
   vpc_id = module.vpc.id
 }
+
+module "rds" {
+  source          = "../../modules/rds"
+  conf            = module.conf
+  vpc_id          = module.vpc.id
+  private_subnets = module.vpc.subnets.private
+}
