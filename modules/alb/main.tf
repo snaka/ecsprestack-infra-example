@@ -55,8 +55,8 @@ resource "aws_lb_target_group" "web" {
 }
 
 resource "aws_lb_listener" "https" {
-  port = 443
-  protocol = "HTTPS"
+  port = 80
+  protocol = "HTTP"
 
   load_balancer_arn = aws_lb.web.arn
   default_action {
