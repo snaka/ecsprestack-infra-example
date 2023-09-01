@@ -25,6 +25,9 @@ resource "aws_rds_cluster" "main" {
   engine_mode        = "serverless"
   engine             = "aurora-mysql"
   engine_version     = "5.7"
+  database_name = "example"
+  master_username = "admin"
+  master_password = "admin1234" # TODO: Use SSM Parameter Store
 
   db_subnet_group_name   = aws_db_subnet_group.main.name
   skip_final_snapshot    = true
