@@ -17,3 +17,6 @@ ecs_capacity_providers:
   fargate_spot:
     base: 1
     weight: 1
+rds:
+  database_name: example
+  master_username: root
