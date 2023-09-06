@@ -40,4 +40,11 @@ resource "aws_rds_cluster" "main" {
     seconds_until_auto_pause = 300
     timeout_action           = "ForceApplyCapacityChange"
   }
+
+  lifecycle {
+    ignore_changes = [
+      master_password,
+      engine_version
+    ]
+  }
 }
