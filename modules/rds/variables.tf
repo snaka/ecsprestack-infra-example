@@ -12,9 +12,3 @@ variable "private_subnets" {
   type        = list(string)
   description = "private subnets for rds subnet group"
 }
-
-variable "master_password" {
-  type        = string
-  description = "db password"
-  sensitive = true
-}

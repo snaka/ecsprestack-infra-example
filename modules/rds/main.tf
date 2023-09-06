@@ -27,7 +27,7 @@ resource "aws_rds_cluster" "main" {
   engine_version     = "5.7"
   database_name = var.conf.v.rds.database_name
   master_username = var.conf.v.rds.master_username
-  master_password = var.master_password
+  master_password = "password" # assume that actual value is stored by web console
 
   db_subnet_group_name   = aws_db_subnet_group.main.name
   skip_final_snapshot    = true
