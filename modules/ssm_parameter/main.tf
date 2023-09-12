@@ -4,8 +4,4 @@ resource "aws_ssm_parameter" "main" {
   name  = "/${var.conf.prefix}/${var.conf.env}/${each.key}"
   type = "SecureString"
   value = each.value
-
-  lifecycle {
-    ignore_changes = [value, description]
-  }
 }
