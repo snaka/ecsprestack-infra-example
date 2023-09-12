@@ -43,7 +43,6 @@ resource "aws_rds_cluster" "main" {
 
   lifecycle {
     ignore_changes = [
-      master_password,
       engine_version
     ]
   }
