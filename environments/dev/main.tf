@@ -36,6 +36,7 @@ module "rds" {
   conf            = module.conf
   vpc_id          = module.vpc.id
   private_subnets = module.vpc.subnets.private
+  db_password     = var.db_password
 }
 
 module "ssm_parameter" {
