@@ -1,17 +1,9 @@
-locals {
-  secure_items = [
-    "db-user",
-    "db-password",
-    "secret-key-base",
-  ]
-}
-
 resource "aws_ssm_parameter" "main" {
-  for_each = toset(local.secure_items)
+  for_each = toset(var.secrets)
 
-  name  = "/${var.conf.prefix}/${var.conf.env}/${each.value}"
+  name  = "/${var.conf.prefix}/${var.conf.env}/${each.key}"
   type = "SecureString"
-  value = "dummy" # assume that actual value is stored by web console
+  value = each.value
 
   lifecycle {
     ignore_changes = [value, description]

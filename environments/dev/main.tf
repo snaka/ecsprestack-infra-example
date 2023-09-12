@@ -41,4 +41,9 @@ module "rds" {
 module "ssm_parameter" {
   source = "../../modules/ssm_parameter"
   conf   = module.conf
+  secrets = {
+    "db-password": var.db_password
+    "db-user": var.db_user
+    "secret-key-base": var.secret_key_base
+  }
 }
