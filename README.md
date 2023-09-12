@@ -31,3 +31,7 @@ The permissions required to apply this Terraform are as follows
     "Version": "2012-10-17"
 }
 ```
+
+# Related Project
+
+- https://github.com/snaka/ecsprestack-app-example
