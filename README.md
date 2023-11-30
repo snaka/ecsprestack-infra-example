@@ -1,5 +1,9 @@
 # ecsprestack-infra-example
 
+This repository is an EXAMPLE of an infrastructure configuration for simple deployment using `ecspresso` and `ecschedule`.
+
+Some people refer to a deployment strategy utilizing `ecspresso` + `ecschedule` as `ecsprestack`.
+
 ## Permission
 
 The permissions required to apply this Terraform are as follows
@@ -42,8 +46,8 @@ These variables are required to apply this Terraform.
 
 | Name | Description |
 |------|-------------|
-| `db_password` | Password for RDS (**must be 8 characters or more**) |
-| `db_username` | Username for RDS |
+| `db_password` | root password for DB (**must be 8 characters or more**) |
+| `db_username` | Username for DB |
 | `secret_key_base` | Secret key base for Rails application |
 
 You can set these variables in `*.tfvars` file or Terraform Cloud workspace settings.
