@@ -22,7 +22,9 @@ The permissions required to apply this Terraform are as follows
                 "iam:PutRolePolicy",
                 "iam:DeleteRolePolicy",
                 "iam:DetachRolePolicy",
-                "iam:GetRolePolicy"
+                "iam:GetRolePolicy",
+                "rds:*",
+                "ssm:*"
             ],
             "Effect": "Allow",
             "Resource": "*"
