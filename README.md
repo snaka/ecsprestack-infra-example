@@ -1,5 +1,7 @@
 # ecsprestack-infra-example
 
+## Permission
+
 The permissions required to apply this Terraform are as follows
 
 ```json
@@ -34,6 +36,18 @@ The permissions required to apply this Terraform are as follows
 }
 ```
 
-# Related Project
+## Variables
+
+These variables are required to apply this Terraform.
+
+| Name | Description |
+|------|-------------|
+| `db_password` | Password for RDS (**must be 8 characters or more**) |
+| `db_username` | Username for RDS |
+| `secret_key_base` | Secret key base for Rails application |
+
+You can set these variables in `*.tfvars` file or Terraform Cloud workspace settings.
+
+## Related Project
 
 - https://github.com/snaka/ecsprestack-app-example
